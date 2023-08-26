@@ -30,6 +30,7 @@
         android:layout_marginBottom="312dp"
         android:fontFamily="@font/amaranth"
         android:gravity="center"
+        android:onClick="calculate"
         android:text="@string/convert"
         android:textSize="16sp"
         android:textStyle="bold"
