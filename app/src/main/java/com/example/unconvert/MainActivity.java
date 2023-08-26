@@ -13,6 +13,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
     Spinner convertFromDropdown;
     Spinner convertToDropdown;
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     TextView textView5;
     Button button;
 
+    //declaring hash map
+    private final Map<String, Double> conversionFactors = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,190 +43,35 @@ public class MainActivity extends AppCompatActivity {
                 R.layout.support_simple_spinner_dropdown_item, dropdownlist);
         convertFromDropdown.setAdapter(adapter);
         convertToDropdown.setAdapter(adapter);
-    }
-//        button.setOnClickListener(new View.OnClickListener() {
-//        @SuppressLint("SetTextI18n")
-//        @Override
-//            public void onClick(View view) {
 
+    // Conversion factors map
+        // Populate conversion factors map
+        conversionFactors.put("Millimetre(mm)", 1.0);
+        conversionFactors.put("Centimetre(cm)", 10.0);
+        conversionFactors.put("Decimetre(dm)", 100.0);
+        conversionFactors.put("Metre(m)", 1000.0);
+        conversionFactors.put("Decametre(dcm)", 10000.0);
+        conversionFactors.put("Hectometre(hm)", 100000.0);
+        conversionFactors.put("Kilometre(km)", 1000000.0);
+    }
         @SuppressLint("SetTextI18n")
         public void calculate (View view)
         {
-//              Decimetres Conversion
-            if (convertFromDropdown.getSelectedItem().equals("Decimetre(dm)")) {
-                if (convertToDropdown.getSelectedItem().equals("Decimetre(dm)")) {
-                    textView5.setText("Please ,Select Correct Option!!!");
-                } else if (convertToDropdown.getSelectedItem().equals("Centimetre(cm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10;
-                    textView5.setText(result + " Centimetres(cm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Millimetre(mm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 100;
-                    textView5.setText(result + " Millimetres(mm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Metre(m)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10;
-                    textView5.setText(result + " Metres(m)");
-                } else if (convertToDropdown.getSelectedItem().equals("Decametre(dcm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 100;
-                    textView5.setText(result + " Decametres(dcm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Hectometre(hm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 1000;
-                    textView5.setText(result + " Hectometres(hm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Kilometre(km)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10000;
-                    textView5.setText(result + " Kilometres(km)");
-                }
-            }
-//              Centimetres Conversion
-            else if (convertFromDropdown.getSelectedItem().equals("Centimetre(cm)")) {
-                if (convertToDropdown.getSelectedItem().equals("Decimetre(dm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10;
-                    textView5.setText(result + " Decimetres(dm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Centimetre(cm)")) {
-                    textView5.setText("Please ,Select Correct Option!!!");
-                } else if (convertToDropdown.getSelectedItem().equals("Millimetre(mm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10;
-                    textView5.setText(result + " Millimetres(mm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Metre(m)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 100;
-                    textView5.setText(result + " Metres(m)");
-                } else if (convertToDropdown.getSelectedItem().equals("Decametre(dcm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 1000;
-                    textView5.setText(result + " Decametres(dcm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Hectometre(hm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10000;
-                    textView5.setText(result + " Hectometres(hm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Kilometre(km)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 100000;
-                    textView5.setText(result + " Kilometres(km)");
-                }
-            }
-//                Millimetre Conversion
-            else if (convertFromDropdown.getSelectedItem().equals("Millimetre(mm)")) {
-                if (convertToDropdown.getSelectedItem().equals("Decimetre(dm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 100;
-                    textView5.setText(result + " Decimetres(dm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Centimetre(cm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10;
-                    textView5.setText(result + " Centimetres(cm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Millimetre(mm)")) {
-                    textView5.setText("Please ,Select Correct Option!!!");
-                } else if (convertToDropdown.getSelectedItem().equals("Metre(m)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 1000;
-                    textView5.setText(result + " Metres(m)");
-                } else if (convertToDropdown.getSelectedItem().equals("Decametre(dcm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10000;
-                    textView5.setText(result + " Decametres(dcm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Hectometre(hm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 100000;
-                    textView5.setText(result + " Hectometres(hm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Kilometre(km)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 1000000;
-                    textView5.setText(result + " Kilometres(km)");
-                }
-            }
-//                Metre Conversions
-            else if (convertFromDropdown.getSelectedItem().equals("Metre(m)")) {
-                if (convertToDropdown.getSelectedItem().equals("Decimetre(dm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10;
-                    textView5.setText(result + " Decimetres(dm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Centimetre(cm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 100;
-                    textView5.setText(result + " Centimetres(cm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Millimetre(mm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 1000;
-                    textView5.setText(result + " Millimetres(mm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Metre(m)")) {
-                    textView5.setText("Please ,Select Correct Option!!!");
-                } else if (convertToDropdown.getSelectedItem().equals("Decametre(dcm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10;
-                    textView5.setText(result + " Decametres(dcm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Hectometre(hm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 100;
-                    textView5.setText(result + " Hectometres(hm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Kilometre(km)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 1000;
-                    textView5.setText(result + " Kilometres(km)");
-                }
-            }
-//                Decametre Conversions
-            else if (convertFromDropdown.getSelectedItem().equals("Decametre(dcm)")) {
-                if (convertToDropdown.getSelectedItem().equals("Decimetre(dm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 100;
-                    textView5.setText(result + " Decimetres(dm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Centimetre(cm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 1000;
-                    textView5.setText(result + " Centimetres(cm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Millimetre(mm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10000;
-                    textView5.setText(result + " Millimetres(mm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Metre(m)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10;
-                    textView5.setText(result + " Metres(m)");
-                } else if (convertToDropdown.getSelectedItem().equals("Decametre(dcm)")) {
-                    textView5.setText("Please ,Select Correct Option!!!");
-                } else if (convertToDropdown.getSelectedItem().equals("Hectometre(hm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10;
-                    textView5.setText(result + " Hectometres(hm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Kilometre(km)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 100;
-                    textView5.setText(result + " Kilometres(km)");
-                }
-            }
-//                Hectometre Conversions
-            else if (convertFromDropdown.getSelectedItem().equals("Hectometre(hm)")) {
-                if (convertToDropdown.getSelectedItem().equals("Decimetre(dm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 1000;
-                    textView5.setText(result + " Decimetres(dm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Centimetre(cm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10000;
-                    textView5.setText(result + " Centimetres(cm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Millimetre(mm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 100000;
-                    textView5.setText(result + " Millimetres(mm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Metre(m)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 100;
-                    textView5.setText(result + " Metres(m)");
-                } else if (convertToDropdown.getSelectedItem().equals("Decametre(dcm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10;
-                    textView5.setText(result + " Decametres(dcm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Hectometre(hm)")) {
-                    textView5.setText("Please ,Select Correct Option!!!");
-                } else if (convertToDropdown.getSelectedItem().equals("Kilometre(km)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) / 10;
-                    textView5.setText(result + " Kilometres(km)");
-                }
-            }
-//                Kilometre Conversions
-            else if (convertFromDropdown.getSelectedItem().equals("Kilometre(km)")) {
-                if (convertToDropdown.getSelectedItem().equals("Decimetre(dm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10000;
-                    textView5.setText(result + " Decimetres(dm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Centimetre(cm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 100000;
-                    textView5.setText(result + " Centimetres(cm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Millimetre(mm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 1000000;
-                    textView5.setText(result + " Millimetres(mm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Metre(m)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 1000;
-                    textView5.setText(result + " Metres(m)");
-                } else if (convertToDropdown.getSelectedItem().equals("Decametre(dcm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 100;
-                    textView5.setText(result + " Decametres(dcm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Hectometre(hm)")) {
-                    double result = Double.parseDouble(editTextNumber.getText().toString()) * 10;
-                    textView5.setText(result + " Hectometres(hm)");
-                } else if (convertToDropdown.getSelectedItem().equals("Kilometre(km)")) {
-                    textView5.setText("Please ,Select Correct Option!!!");
-                }
-            }
-            Toast.makeText(MainActivity.this, "Converted Successfully!!!!", Toast.LENGTH_SHORT).show();
-        }
-    //}
-        //});
+            String selectedFromUnit = convertFromDropdown.getSelectedItem().toString();
+            String selectedToUnit = convertToDropdown.getSelectedItem().toString();
 
+            double inputValue = Double.parseDouble(editTextNumber.getText().toString());
+            double fromFactor = conversionFactors.get(selectedFromUnit);
+            double toFactor = conversionFactors.get(selectedToUnit);
+
+            double result = inputValue * (fromFactor / toFactor);
+            String resultUnit = selectedToUnit.substring(selectedToUnit.indexOf('(') + 1, selectedToUnit.indexOf(')'));
+
+            textView5.setText(result + " " + resultUnit);
+            Toast.makeText(MainActivity.this, "Converted Successfully!", Toast.LENGTH_SHORT).show();
+
+        }
 }
-//}
 
 
 
