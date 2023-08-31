@@ -54,13 +54,19 @@ public class MainActivity extends AppCompatActivity {
         conversionFactors.put("Hectometre(hm)", 100000.0);
         conversionFactors.put("Kilometre(km)", 1000000.0);
     }
-        @SuppressLint("SetTextI18n")
-        public void calculate (View view)
-        {
+    @SuppressLint("SetTextI18n")
+    public void calculate(View view) {
+        try {
             String selectedFromUnit = convertFromDropdown.getSelectedItem().toString();
             String selectedToUnit = convertToDropdown.getSelectedItem().toString();
 
-            double inputValue = Double.parseDouble(editTextNumber.getText().toString());
+            String inputText = editTextNumber.getText().toString();
+            if (inputText.isEmpty()) {
+                textView5.setText("Please enter a value");
+                return;
+            }
+
+            double inputValue = Double.parseDouble(inputText);
             double fromFactor = conversionFactors.get(selectedFromUnit);
             double toFactor = conversionFactors.get(selectedToUnit);
 
@@ -69,8 +75,15 @@ public class MainActivity extends AppCompatActivity {
 
             textView5.setText(result + " " + resultUnit);
             Toast.makeText(MainActivity.this, "Converted Successfully!", Toast.LENGTH_SHORT).show();
-
+        } catch (NumberFormatException e) {
+            textView5.setText("Invalid input");
+            Toast.makeText(MainActivity.this, "Invalid input. Please enter a valid number.", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            textView5.setText("An error occurred");
+            Toast.makeText(MainActivity.this, "An error occurred. Please try again.", Toast.LENGTH_SHORT).show();
         }
+    }
+
 }
 
 
