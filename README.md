@@ -6,15 +6,22 @@
 <a href="https://www.linkedin.com/posts/akshay-chobhe-989004220_task-internship-androiddevelopment-activity-6905531785393123328-WRbu?utm_source=share&utm_medium=member_desktop">👉 Demo Link </a>
 
 <h2>📷Project Screenshots: </h2>
-
-1<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/1_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
-2<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/2_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
-3<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/3_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
-
-4<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/4_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
-5<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/5_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
-
-<br>  
+<p align="center" float="left">
+<table>
+  <tr>
+    <td>Splash Screen</td>
+    <td>Home Screen</td>
+    <td>Output/ Result</td>
+    <td>Dropdown List</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/1_framed.png?raw=true" alt="project-screenshot" width="250" height="450/"></td>
+    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/2_framed.png?raw=true" alt="project-screenshot" width="250" height="450/"></td>
+    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/3_framed.png?raw=true" alt="project-screenshot" width="250" height="450/"></td>
+    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/5_framed.png?raw=true" alt="project-screenshot" width="250" height="450/"></td>
+  </tr>
+ </table>
+ 
 <h2>🧐 Features</h2>
 
 Here are some of the project's best features:
@@ -30,7 +37,7 @@ Here are some of the project's best features:
 <p>1. Clone the Repository</p>
 
 ```
-git clone https://github.com/yourusername/UnitConversionApp.git cd UnitConversionApp
+git clone https://github.com/AkshayChobhe/UnConvertApp.git
 ```
 
 <p>2. Open the Project in Android Studio</p>
