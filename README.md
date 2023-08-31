@@ -7,12 +7,12 @@
 
 <h2>📷Project Screenshots: </h2>
 
-1<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/1_framed.png?raw=true" alt="project-screenshot" width="300" height="600/">
-2<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/2_framed.png?raw=true" alt="project-screenshot" width="300" height="600/">
-3<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/3_framed.png?raw=true" alt="project-screenshot" width="300" height="600/">
+1<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/1_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
+2<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/2_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
+3<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/3_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
 
-4<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/4_framed.png?raw=true" alt="project-screenshot" width="300" height="600/">
-5<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/5_framed.png?raw=true" alt="project-screenshot" width="300" height="600/">
+4<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/4_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
+5<img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/5_framed.png?raw=true" alt="project-screenshot" width="250" height="500/">
 
 <br>  
 <h2>🧐 Features</h2>
