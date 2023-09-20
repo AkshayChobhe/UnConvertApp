@@ -15,10 +15,10 @@
     <td>Dropdown List</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/1_framed.png?raw=true" alt="project-screenshot" width="250" height="450/"></td>
-    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/2_framed.png?raw=true" alt="project-screenshot" width="250" height="450/"></td>
-    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/3_framed.png?raw=true" alt="project-screenshot" width="250" height="450/"></td>
-    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/5_framed.png?raw=true" alt="project-screenshot" width="250" height="450/"></td>
+    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/1_framed.png?raw=true" alt="project-screenshot" width="200" height="400/"></td>
+    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/2_framed.png?raw=true" alt="project-screenshot" width="200" height="400/"></td>
+    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/3_framed.png?raw=true" alt="project-screenshot" width="200" height="400/"></td>
+    <td><img src="https://github.com/AkshayChobhe/UnConvertApp/blob/master/app/src/main/res/drawable/5_framed.png?raw=true" alt="project-screenshot" width="200" height="400/"></td>
   </tr>
  </table>
  
